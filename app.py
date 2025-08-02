@@ -13,5 +13,10 @@ def greet():
     return 'Hello'
 
 
+@app.route('/greet/<name>')
+def greet_name(name):
+    return f'Hello {name}'
+
+
 if __name__ == '__main__':
     app.run(debug=True)
